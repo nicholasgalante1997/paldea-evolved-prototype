@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --write src",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "pkg:server": "webpack --config build-config/webpack.server.js",
+    "start": "node lib/index.js"
   },
   "keywords": [],
   "author": "",

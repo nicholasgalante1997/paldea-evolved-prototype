@@ -20,7 +20,7 @@ module.exports = {
       resolve: {
         extensions: ['*', '.js', '.jsx', '.ts', '.tsx'],
         alias: {
-          "@": path.resolve(process.cwd(), "src", "web"),
+          "@": path.resolve(process.cwd(), "src"),
         }
       },
     output: {

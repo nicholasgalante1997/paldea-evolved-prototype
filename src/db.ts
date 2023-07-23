@@ -1,6 +1,6 @@
 import mysql from 'mysql';
 
-export class DatabaseManager {
+class DatabaseManager {
   _config: mysql.ConnectionConfig;
 
   constructor(config: mysql.ConnectionConfig) {
@@ -46,5 +46,21 @@ export class DatabaseManager {
       console.log(e);
       return null;
     }
+  }
+}
+
+export const db = new DatabaseManager({
+  user: 'root',
+  password: process.env.MYSQL_PASSWORD,
+  database: 'paldea',
+  host: 'paldea_mysql_db',
+  port: 3306,
+})
+
+export function checkForTables() {
+  try {
+
+  } catch (e) {
+    
   }
 }
